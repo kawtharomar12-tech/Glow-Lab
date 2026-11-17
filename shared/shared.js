@@ -536,7 +536,7 @@ function initializeMobileMenu() {
         function () {
 
             mainNav.classList.toggle(
-                "active"
+                "open"
             );
 
         }
