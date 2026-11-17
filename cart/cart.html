@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Glow Lab | Shopping Bag</title>
+
+    <!-- Shared CSS -->
+    <link
+        rel="stylesheet"
+        href="../shared/shared.css">
+
+    <!-- Cart CSS -->
+    <link
+        rel="stylesheet"
+        href="cart.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+    <!-- Shared Header -->
+    <div id="site-header"></div>
+
+
+    <main class="cart-page">
+
+        <!-- PAGE HEADING -->
+        <section class="cart-heading">
+
+            <p>
+                YOUR BAG
+            </p>
+
+            <h1>
+                Shopping Bag
+            </h1>
+
+            <span>
+                Review your products before checkout
+            </span>
+
+        </section>
+
+
+        <!-- CART LAYOUT -->
+        <section
+            class="cart-layout"
+            id="cartLayout">
+
+
+            <!-- PRODUCTS -->
+            <div
+                class="cart-items"
+                id="cartItems">
+            </div>
+
+
+            <!-- ORDER SUMMARY -->
+            <aside
+                class="order-summary"
+                id="orderSummary">
+
+                <h2>
+                    Order Summary
+                </h2>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="subtotal">
+                        0.00 JD
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Delivery
+                    </span>
+
+                    <strong>
+                        Free
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <div class="summary-row total-row">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="total">
+                        0.00 JD
+                    </strong>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="checkout-button"
+                    id="checkoutButton">
+
+                    Proceed to Checkout
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+                <a
+                    href="../index/glow.html"
+                    class="continue-shopping">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Continue Shopping
+
+                </a>
+
+            </aside>
+
+        </section>
+
+
+        <!-- EMPTY CART -->
+        <section
+            class="cart-empty"
+            id="cartEmpty">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <h2>
+                Your bag is empty
+            </h2>
+
+            <p>
+                Add some Glow Lab favorites
+                and come back here.
+            </p>
+
+            <a
+                href="../index/glow.html"
+                class="shop-button">
+
+                Start Shopping
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         CHECKOUT MODAL
+    =========================================== -->
+
+    <div
+        class="checkout-modal"
+        id="checkoutModal"
+        aria-hidden="true">
+
+        <div
+            class="checkout-overlay"
+            id="checkoutOverlay">
+        </div>
+
+
+        <section
+            class="checkout-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="checkoutTitle">
+
+            <button
+                type="button"
+                class="checkout-close"
+                id="closeCheckout"
+                aria-label="Close checkout">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <div class="checkout-modal-heading">
+
+                <p>
+                    ALMOST THERE
+                </p>
+
+                <h2 id="checkoutTitle">
+                    Complete Your Order
+                </h2>
+
+                <span>
+                    Enter your delivery details below.
+                </span>
+
+            </div>
+
+
+            <form id="checkoutForm">
+
+                <div class="checkout-name-row">
+
+                    <div class="checkout-field">
+
+                        <label for="checkoutFirstName">
+                            First Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="checkoutFirstName"
+                            required>
+
+                    </div>
+
+
+                    <div class="checkout-field">
+
+                        <label for="checkoutLastName">
+                            Last Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="checkoutLastName"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="checkout-field">
+
+                    <label for="checkoutPhone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="checkoutPhone"
+                        placeholder="+962 7X XXX XXXX"
+                        required>
+
+                </div>
+
+
+                <div class="checkout-field">
+
+                    <label for="checkoutCity">
+                        City
+                    </label>
+
+                    <input
+                        type="text"
+                        id="checkoutCity"
+                        placeholder="Amman"
+                        required>
+
+                </div>
+
+
+                <div class="checkout-field">
+
+                    <label for="checkoutAddress">
+                        Delivery Address
+                    </label>
+
+                    <textarea
+                        id="checkoutAddress"
+                        rows="3"
+                        placeholder="Area, street, building..."
+                        required></textarea>
+
+                </div>
+
+
+                <div class="checkout-payment">
+
+                    <p>
+                        Payment Method
+                    </p>
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="cash"
+                            checked>
+
+                        <span>
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                            Cash on Delivery
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+
+                <div class="promo-section">
+
+                    <label for="discountCode">
+                        Discount Code
+                    </label>
+
+                    <div class="promo-row">
+
+                        <input
+                            type="text"
+                            id="discountCode"
+                            placeholder="Enter promo code">
+
+                        <button
+                            type="button"
+                            id="applyDiscountButton"
+                            class="apply-discount-button">
+
+                            Apply
+
+                        </button>
+
+                    </div>
+
+                    <p
+                        class="promo-message"
+                        id="promoMessage">
+                    </p>
+
+                </div>
+
+
+                <div class="checkout-discount-row">
+
+                    <span>
+                        Discount
+                    </span>
+
+                    <strong id="checkoutDiscount">
+                        -0.00 JD
+                    </strong>
+
+                </div>
+
+                <div class="checkout-modal-summary">
+
+                    <span>
+                        Order Total
+                    </span>
+
+                    <strong id="checkoutTotal">
+                        0.00 JD
+                    </strong>
+
+                </div>
+
+
+                <p
+                    class="checkout-error"
+                    id="checkoutError">
+                </p>
+
+
+                <button
+                    type="submit"
+                    class="place-order-button">
+
+                    Place Order
+
+                    <i class="fa-solid fa-check"></i>
+
+                </button>
+
+            </form>
+
+
+            <div
+                class="checkout-success"
+                id="checkoutSuccess">
+
+                <div class="success-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <p class="success-label">
+                    ORDER CONFIRMED
+                </p>
+
+                <h2>
+                    Thank you for your order ♡
+                </h2>
+
+                <p class="success-text">
+                    Your order has been placed successfully.
+                </p>
+
+                <div class="success-order-info">
+
+                    <div>
+                        <span>
+                            Order Number
+                        </span>
+
+                        <strong id="successOrderNumber">
+                            GL0000
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="successOrderTotal">
+                            0.00 JD
+                        </strong>
+                    </div>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="success-continue-button"
+                    id="continueShoppingButton">
+
+                    Continue Shopping
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- Shared Footer -->
+    <div id="site-footer"></div>
+
+
+    <!-- Shared JavaScript -->
+    <script src="../shared/shared.js"></script>
+
+    <!-- Cart JavaScript -->
+    <script src="cart.js"></script>
+
+</body>
+
+</html>

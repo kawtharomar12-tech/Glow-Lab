@@ -1,0 +1,612 @@
+/* =========================================
+   1. RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   2. BODY
+========================================= */
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8e8ef,
+            #fdf7fa
+        );
+
+    color: #321522;
+}
+
+
+/* =========================================
+   3. LOGIN PAGE
+========================================= */
+
+.login-page {
+    min-height: 100vh;
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+
+/* =========================================
+   4. LEFT SIDE
+========================================= */
+
+.login-image {
+    width: 48%;
+
+    min-height: 650px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            rgba(126, 25, 76, 0.08),
+            rgba(126, 25, 76, 0.08)
+        ),
+        url("../images/login-beauty.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 28px 0 0 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px rgba(74, 21, 47, 0.12);
+}
+
+
+/* dark/soft overlay over image */
+
+.login-image::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(69, 7, 38, 0.38),
+            rgba(255, 255, 255, 0.02)
+        );
+}
+
+
+/* =========================================
+   5. LEFT SIDE CONTENT
+========================================= */
+
+.image-text {
+    position: relative;
+
+    z-index: 2;
+
+    width: 85%;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+/* YOUR GL LOGO */
+
+.image-text img {
+    width: 190px;
+
+    max-width: 70%;
+
+    display: block;
+
+    margin: 0 auto 30px;
+
+    object-fit: contain;
+}
+
+
+/* Title */
+
+.image-text h2 {
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+
+    font-weight: 500;
+
+    margin-bottom: 12px;
+
+    text-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+
+/* subtitle */
+
+.image-text p {
+    font-size: 17px;
+
+    letter-spacing: 0.5px;
+
+    color: #fbeaf2;
+}
+
+
+/* =========================================
+   6. RIGHT SIDE
+========================================= */
+
+.login-container {
+    width: 52%;
+
+    min-height: 650px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 55px;
+
+    background: white;
+
+    border-radius: 0 28px 28px 0;
+
+    box-shadow:
+        0 20px 60px rgba(74, 21, 47, 0.12);
+}
+
+
+/* =========================================
+   7. LOGIN CARD
+========================================= */
+
+.login-card {
+    width: 100%;
+
+    max-width: 430px;
+}
+
+
+/* Welcome Back */
+
+.login-card h1 {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    color: #4b142d;
+
+    margin-bottom: 10px;
+}
+
+
+/* Subtitle */
+
+.subtitle {
+    color: #826b75;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    margin-bottom: 38px;
+}
+
+
+/* =========================================
+   8. INPUT GROUP
+========================================= */
+
+.input-group {
+    margin-bottom: 22px;
+}
+
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #4d2638;
+}
+
+
+/* Inputs */
+
+.input-group input {
+    width: 100%;
+
+    height: 54px;
+
+    padding: 0 18px;
+
+    border:
+        1px solid #e4cfd9;
+
+    border-radius: 12px;
+
+    background: #fff;
+
+    color: #321522;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Placeholder */
+
+.input-group input::placeholder {
+    color: #ad9ba3;
+}
+
+
+/* when user clicks inside input */
+
+.input-group input:focus {
+    border-color: #a72b69;
+
+    box-shadow:
+        0 0 0 4px rgba(167, 43, 105, 0.08);
+}
+
+
+/* =========================================
+   9. PASSWORD BOX
+========================================= */
+
+.password-box {
+    position: relative;
+}
+
+
+.password-box input {
+    padding-right: 55px;
+}
+
+
+/* eye button */
+
+.password-box button {
+    position: absolute;
+
+    top: 50%;
+    right: 15px;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    opacity: 0.65;
+
+    transition: 0.2s;
+}
+
+
+.password-box button:hover {
+    opacity: 1;
+}
+
+
+/* =========================================
+   10. FORGOT PASSWORD
+========================================= */
+
+.forgot-password {
+    text-align: right;
+
+    margin-top: -5px;
+    margin-bottom: 25px;
+}
+
+
+.forgot-password a {
+    color: #a72b69;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   11. LOGIN BUTTON
+========================================= */
+
+.login-button {
+    width: 100%;
+
+    height: 54px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a72b69,
+            #7e194c
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 24px rgba(167, 43, 105, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.login-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 30px rgba(167, 43, 105, 0.33);
+}
+
+
+/* =========================================
+   12. DIVIDER
+========================================= */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 30px 0;
+}
+
+
+.divider span {
+    flex: 1;
+
+    height: 1px;
+
+    background: #ead7e0;
+}
+
+
+.divider p {
+    color: #9a858f;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   13. CREATE ACCOUNT BUTTON
+========================================= */
+
+.create-account {
+    width: 100%;
+
+    height: 54px;
+
+    border:
+        1px solid #a72b69;
+
+    border-radius: 30px;
+
+    background: white;
+
+    color: #a72b69;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.create-account:hover {
+    background: #f8e8f1;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   14. TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .login-page {
+        width: 94%;
+    }
+
+
+    .login-image {
+        width: 45%;
+
+        min-height: 600px;
+    }
+
+
+    .login-container {
+        width: 55%;
+
+        min-height: 600px;
+
+        padding: 40px;
+    }
+
+
+    .image-text h2 {
+        font-size: 30px;
+    }
+
+
+    .image-text img {
+        width: 150px;
+    }
+
+
+    .login-card h1 {
+        font-size: 36px;
+    }
+
+}
+
+
+/* =========================================
+   15. MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        background: white;
+    }
+
+
+    .login-page {
+        width: 100%;
+
+        min-height: 100vh;
+
+        padding: 0;
+
+        display: block;
+    }
+
+
+    /* hide left image on mobile */
+
+    .login-image {
+        display: none;
+    }
+
+
+    .login-container {
+        width: 100%;
+
+        min-height: 100vh;
+
+        border-radius: 0;
+
+        padding:
+            50px 25px;
+
+        box-shadow: none;
+    }
+
+
+    .login-card {
+        max-width: 450px;
+    }
+
+
+    .login-card h1 {
+        font-size: 35px;
+
+        text-align: center;
+    }
+
+
+    .subtitle {
+        text-align: center;
+
+        margin-bottom: 35px;
+    }
+
+}
+
+
+/* =========================================
+   16. SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .login-container {
+        padding:
+            40px 20px;
+    }
+
+
+    .login-card h1 {
+        font-size: 31px;
+    }
+
+
+    .divider {
+        gap: 8px;
+    }
+
+
+    .divider p {
+        font-size: 12px;
+    }
+
+}

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Glow Lab | Beauty & Cosmetics</title>
+
+    <meta name="description"
+          content="Glow Lab - Discover beauty, skincare, makeup and hair care products.">
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="../shared/shared.css">
+
+    <!-- Home Page CSS -->
+    <link rel="stylesheet" href="glow.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+
+<body>
+
+<!-- ==========================================
+     SHARED HEADER
+=========================================== -->
+
+<div id="site-header"></div>
+
+
+
+<!-- ==========================================
+     MAIN CONTENT
+=========================================== -->
+
+<main>
+
+
+<!-- ==========================================
+     HERO
+=========================================== -->
+
+<section class="hero-banner" id="home">
+
+    <div class="hero-content">
+
+        <p class="hero-small-title">
+            BEAUTY, SIMPLIFIED.
+        </p>
+
+
+        <h1>
+            Glow like
+            <span>never before.</span>
+        </h1>
+
+
+        <div class="hero-actions">
+
+            <button
+                class="primary-button"
+                id="shop-btn">
+
+                Shop Now
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     SEARCH + SORT
+=========================================== -->
+
+<section class="shop-controls">
+
+    <div class="search-box">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+            id="productSearch"
+            class="search"
+            type="search"
+            placeholder="Search products..."
+            aria-label="Search products">
+
+    </div>
+
+
+    <div class="sort-box">
+
+        <i class="fa-solid fa-arrow-down-wide-short"></i>
+
+        <select
+            id="productSort"
+            aria-label="Sort products">
+
+            <option value="featured">
+                Featured
+            </option>
+
+            <option value="price-low">
+                Price: Low to High
+            </option>
+
+            <option value="price-high">
+                Price: High to Low
+            </option>
+
+            <option value="newest">
+                Newest
+            </option>
+
+            <option value="best">
+                Best Sellers
+            </option>
+
+        </select>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     CATEGORIES
+=========================================== -->
+
+<section
+    class="category-section section-container"
+    id="Categories">
+
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            FIND YOUR FAVORITES
+        </p>
+
+        <h2>
+            Shop By Category
+        </h2>
+
+        <p>
+            Everything your beauty routine needs,
+            all in one place.
+        </p>
+
+    </div>
+
+
+
+    <div class="category-bar">
+
+
+        <!-- ALL -->
+ 
+        <button
+        class="category-item"
+        data-filter="sale">
+
+         <div class="category-image-wrapper">
+         <img
+            src="../images/sale.jpeg"
+            alt="Special Offers">
+           </div>
+
+           <span>Special Offers</span>
+        </button>
+
+
+        <!-- NEW -->
+
+        <button
+            class="category-item"
+            data-filter="new">
+
+            <div class="category-image-wrapper">
+
+                <img
+                    src="../images/newarr.jpeg"
+                    alt="New arrivals">
+
+            </div>
+
+            <span> New Arrival</span>
+
+        </button>
+
+
+
+        <!-- MAKEUP -->
+
+        <button
+            class="category-item"
+            data-filter="makeup">
+
+            <div class="category-image-wrapper">
+
+                <img
+                    src="../images/pinkmak.jpeg"
+                    alt="Makeup">
+
+            </div>
+
+            <span>Makeup</span>
+
+        </button>
+
+
+
+        <!-- SKINCARE -->
+
+        <button
+            class="category-item"
+            data-filter="skincare">
+
+            <div class="category-image-wrapper">
+
+                <img
+                    src="../images/skinpi.jpeg"
+                    alt="Skin care">
+
+            </div>
+
+            <span>Skin Care</span>
+
+        </button>
+
+
+
+        <!-- HAIR -->
+
+        <button
+            class="category-item"
+            data-filter="haircare">
+
+            <div class="category-image-wrapper">
+
+                <img
+                    src="../images/hair.jpeg"
+                    alt="Hair care">
+
+            </div>
+
+            <span>Hair Care</span>
+
+        </button>
+
+
+
+        <!-- NAILS -->
+
+        <button
+            class="category-item"
+            data-filter="nailcare">
+
+            <div class="category-image-wrapper">
+
+                <img
+                    src="../images/pinknail.jpeg"
+                    alt="Nail care">
+
+            </div>
+
+            <span>Nail Care</span>
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     BEST SELLERS
+=========================================== -->
+
+<section
+    class="product-section section-container"
+    id="Best-seller">
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            CUSTOMER FAVORITES
+        </p>
+
+        <h2>
+            Best Sellers
+        </h2>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <article
+            class="product-card"
+            data-id="p1"
+            data-category="makeup"
+            data-collection="best"
+            data-price="11"
+            data-order="1"
+            data-bestseller="true">
+
+
+            <div class="product-image">
+
+                <span class="product-badge">
+                    Best Seller
+                </span>
+
+                <img
+                    src="../images/maybellene mescara.jpeg"
+                    alt="Maybelline Lash Sensational Sky High Mascara">
+
+            </div>
+
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    Makeup
+                </p>
+
+                <h3>
+                    Maybelline Lash Sensational Sky High
+                </h3>
+
+                <div class="product-footer">
+
+                    <p class="price">
+                        11 JD
+                    </p>
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="heart-btn"
+                            aria-label="Add to wishlist">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="add-btn"
+                            aria-label="Add to bag">
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCT 2 -->
+
+        <article
+            class="product-card"
+            data-id="p2"
+            data-category="skincare"
+            data-collection="best"
+            data-price="2"
+            data-order="2"
+            data-bestseller="true">
+
+
+            <div class="product-image">
+
+                <span class="product-badge">
+                    Best Seller
+                </span>
+
+                <img
+                    src="../images/Sheer Mineral .jpg"
+                    alt="Cetaphil Sheer Mineral Sunscreen SPF 50">
+
+            </div>
+
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    Skin Care
+                </p>
+
+                <h3>
+                    Cetaphil Sheer Mineral Sunscreen SPF 50
+                </h3>
+
+
+                <div class="product-footer">
+
+                    <p class="price">
+                        2 JD
+                    </p>
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="heart-btn"
+                            aria-label="Add to wishlist">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="add-btn"
+                            aria-label="Add to bag">
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCT 3 -->
+
+        <article
+            class="product-card"
+            data-id="p3"
+            data-category="skincare"
+            data-collection="best"
+            data-price="11"
+            data-order="3"
+            data-bestseller="true">
+
+
+            <div class="product-image">
+
+                <span class="product-badge">
+                    Best Seller
+                </span>
+
+                <img
+                    src="../images/cerave foaming facial cleanser.jpeg"
+                    alt="CeraVe Foaming Facial Cleanser">
+
+            </div>
+
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    Skin Care
+                </p>
+
+                <h3>
+                    CeraVe Foaming Facial Cleanser
+                </h3>
+
+
+                <div class="product-footer">
+
+                    <p class="price">
+                        11 JD
+                    </p>
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="heart-btn"
+                            aria-label="Add to wishlist">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="add-btn"
+                            aria-label="Add to bag">
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCT 4 -->
+
+        <article
+            class="product-card"
+            data-id="p4"
+            data-category="skincare"
+            data-collection="best"
+            data-price="4.2"
+            data-order="4"
+            data-bestseller="true">
+
+
+            <div class="product-image">
+
+                <span class="product-badge">
+                    Best Seller
+                </span>
+
+                <img
+                    src="../images/niaseamide.jpeg"
+                    alt="Niacinamide 10% Zinc 1%">
+
+            </div>
+
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    Skin Care
+                </p>
+
+                <h3>
+                    Niacinamide 10% + Zinc 1%
+                </h3>
+
+
+                <div class="product-footer">
+
+                    <p class="price">
+                        4.20 JD
+                    </p>
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="heart-btn"
+                            aria-label="Add to wishlist">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="add-btn"
+                            aria-label="Add to bag">
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     NEW ARRIVAL
+=========================================== -->
+
+<section
+    class="product-section section-container"
+    id="New-arrival">
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            JUST DROPPED
+        </p>
+
+        <h2>
+            New Arrivals
+        </h2>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <!-- PRODUCT 5 -->
+
+        <article
+            class="product-card"
+            data-id="p5"
+            data-category="haircare"
+            data-collection="new"
+            data-price="10"
+            data-order="8"
+            data-bestseller="false">
+
+
+            <div class="product-image">
+
+                <span class="product-badge new-badge">
+                    New
+                </span>
+
+                <img
+                    src="../images/Moisturizing Curl Activator Cream.jpg"
+                    alt="Moisturizing Curl Activator Cream">
+
+            </div>
+
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    Hair Care
+                </p>
+
+                <h3>
+                    Shea Butter Moisturizing Curl Activator Cream
+                </h3>
+
+
+                <div class="product-footer">
+
+                    <p class="price">
+                        10 JD
+                    </p>
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="heart-btn"
+                            aria-label="Add to wishlist">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="add-btn"
+                            aria-label="Add to bag">
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCT 6 -->
+
+        <article
+            class="product-card"
+            data-id="p6"
+            data-category="makeup"
+            data-collection="new"
+            data-price="2"
+            data-order="7"
+            data-bestseller="false">
+
+
+            <div class="product-image">
+
+                <span class="product-badge new-badge">
+                    New
+                </span>
+
+                <img
+                    src="../images/golden rose eyebrow pencil.jpeg"
+                    alt="Golden Rose Eyebrow Pencil">
+
+            </div>
+
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    Makeup
+                </p>
+
+                <h3>
+                    Golden Rose Eyebrow Pencil
+                </h3>
+
+
+                <div class="product-footer">
+
+                    <p class="price">
+                        2 JD
+                    </p>
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="heart-btn"
+                            aria-label="Add to wishlist">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="add-btn"
+                            aria-label="Add to bag">
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCT 7 -->
+
+        <article
+            class="product-card"
+            data-id="p7"
+            data-category="makeup"
+            data-collection="new"
+            data-price="7.7"
+            data-order="6"
+            data-bestseller="false">
+
+
+            <div class="product-image">
+
+                <span class="product-badge new-badge">
+                    New
+                </span>
+
+                <img
+                    src="../images/buttermeltnyx.jpg"
+                    alt="NYX Butter Melt Blush">
+
+            </div>
+
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    Makeup
+                </p>
+
+                <h3>
+                    NYX Butter Melt Blush
+                </h3>
+
+
+                <div class="product-footer">
+
+                    <p class="price">
+                        7.70 JD
+                    </p>
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="heart-btn"
+                            aria-label="Add to wishlist">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="add-btn"
+                            aria-label="Add to bag">
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRODUCT 8 -->
+
+        <article
+            class="product-card"
+            data-id="p8"
+            data-category="makeup"
+            data-collection="new"
+            data-price="4.2"
+            data-order="5"
+            data-bestseller="false">
+
+
+            <div class="product-image">
+
+                <span class="product-badge new-badge">
+                    New
+                </span>
+
+                <img
+                    src="../images/glow serum primer.jpg"
+                    alt="Essence Glow Serum Primer">
+
+            </div>
+
+
+            <div class="product-info">
+
+                <p class="product-category">
+                    Makeup
+                </p>
+
+                <h3>
+                    Essence Hello Good Stuff Glow Serum Primer
+                </h3>
+
+
+                <div class="product-footer">
+
+                    <p class="price">
+                        4.20 JD
+                    </p>
+
+
+                    <div class="product-actions">
+
+                        <button
+                            class="heart-btn"
+                            aria-label="Add to wishlist">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <button
+                            class="add-btn"
+                            aria-label="Add to bag">
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- No Results -->
+
+<div
+    id="emptyState"
+    class="empty-state hidden">
+
+    <i class="fa-regular fa-face-frown"></i>
+
+    <h3>No products found</h3>
+
+    <p>
+        Try another search or category.
+    </p>
+
+</div>
+
+
+</main>
+
+
+
+<!-- ==========================================
+     SHARED FOOTER
+=========================================== -->
+
+<div id="site-footer"></div>
+
+
+
+<!-- Shared JavaScript -->
+<script src="../shared/shared.js"></script>
+
+<!-- Home Page JavaScript -->
+<script src="glow.js"></script>
+
+</body>
+
+</html>
