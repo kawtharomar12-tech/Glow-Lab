@@ -510,20 +510,13 @@ function showToast(message) {
 /* =========================================
    7. MOBILE MENU
 ========================================= */
-
 function initializeMobileMenu() {
 
-
     const menuButton =
-        document.getElementById(
-            "menuButton"
-        );
-
+        document.getElementById("menuButton");
 
     const mainNav =
-        document.getElementById(
-            "mainNav"
-        );
+        document.getElementById("mainNav");
 
 
     if (!menuButton || !mainNav) {
@@ -535,8 +528,56 @@ function initializeMobileMenu() {
         "click",
         function () {
 
-            mainNav.classList.toggle(
-                "open"
+            // Open / close menu
+            mainNav.classList.toggle("open");
+
+
+            // Change icon
+            const icon =
+                menuButton.querySelector("i");
+
+
+            if (
+                mainNav.classList.contains("open")
+            ) {
+
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-xmark");
+
+            } else {
+
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+
+            }
+
+        }
+    );
+
+
+    // Close menu after clicking a link
+    const navLinks =
+        mainNav.querySelectorAll("a");
+
+
+    navLinks.forEach(
+        function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    mainNav.classList.remove("open");
+
+
+                    const icon =
+                        menuButton.querySelector("i");
+
+
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+
+                }
             );
 
         }
